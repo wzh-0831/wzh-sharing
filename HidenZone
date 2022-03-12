@@ -1,0 +1,24 @@
+@echo off
+set ci=3
+echo.
+echo ע�⣺ ����ݔ���e�`���˳�.
+echo.
+:1
+set /p mima=Ոݔ���ܴa��
+if \"%mima%\"==\"szxc\" goto o
+set /a ci-=1
+if \"%ci%\"==\"0\" cls&echo.&echo =�]�ܴa�o���M��=&echo.&pause&echo.&exit
+cls&echo.&echo ��߀�� %ci% �ΙC��&echo.&goto 1
+:o
+cls&echo.
+echo= �ܴa����_������ =
+md E:\RECYCLED\UDrives.{25336920-03F9-11CF-8FD0-00AA00686F13}>NUL
+if exist M:\NUL goto delete
+subst M: E:\RECYCLED\UDrives.{25336920-03F9-11CF-8FD0-00AA00686F13}
+start M:\
+goto end
+:delete
+subst /D M:
+:end
+echo.&pause&exit.
+2666
